@@ -1,29 +1,13 @@
 import { useEffect, useState } from "react";
+import { Invoice, NewInvoice, Transactions } from "~/@types";
+import { mockRequestInvoice } from "~/utils/mock";
 import { getInvoiceStatus } from "~/utils/helpers";
-import { Invoice, NewInvoice } from "~/@types";
 
 export type Props = {
-    summaryData?: any;
+    summaryData?: {
+        transactions: Transactions[]
+    } | null
 }
-
-const mockRequest = () => ([
-    {
-        clientName: 'John Doe',
-        creationDate: new Date('2/1/2022'),
-        uuid: '455634',
-        reference: '1234',
-        amount: 9000,
-        status: 'UNPAID'
-    },
-    {
-        clientName: 'Jane Doedddd',
-        creationDate: new Date('2/1/2021'),
-        uuid: '855634',
-        reference: '2224',
-        amount: 4500,
-        status: 'UNPAID'
-    },
-]);
 
 export default function useInvoices({ summaryData }: Props) {
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -33,9 +17,9 @@ export default function useInvoices({ summaryData }: Props) {
     useEffect(() => {
         if (summaryData) {
             setIsLoading(true);
-            // TODO: Refactor this with a hash-map
+            // TODO: Refactor this with a hash-map (remove second for-loop)
             try {
-                const reqData = mockRequest();
+                const reqData = mockRequestInvoice();
                 const cloneInvoicesData = [...reqData];
                 for (let i = 0; i < reqData.length; i += 1) {
                     for (let j = 0; j < summaryData.transactions.length; j += 1) {
@@ -72,6 +56,11 @@ export default function useInvoices({ summaryData }: Props) {
         setData((prev) => [...prev, newInvoice]);
     };
 
-    return { data, error, isLoading, createNewInvoice };
+    const editExistingInvoice = (formInvoiceData: Invoice) => {
+        // TODO: Update existing invoice
+        // setData((prev) => [...prev, newInvoice]);
+    };
+
+    return { data, error, isLoading, createNewInvoice, editExistingInvoice };
 }
     
