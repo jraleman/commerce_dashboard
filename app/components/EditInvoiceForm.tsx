@@ -31,6 +31,7 @@ export default function EditInvoiceForm({ isEdit = false, invoice, onEditInvoice
     };
 
     const formattedDate = formatDate(creationDate);
+    const statusColor = invoice.status === 'PAID' ? 'green' : 'red';
 
     // TODO: Use form component with API call
     return (
@@ -40,16 +41,18 @@ export default function EditInvoiceForm({ isEdit = false, invoice, onEditInvoice
                 Ref: {reference}
             </h5>
             <div className="text-gray-900 dark:text-white">
-                <span>👤</span>
-                <input type="text" name="invoice" value={clientName} onChange={e => setClientName(e.target.value)} disabled={!isEdit} className="text-1xl font-semibold dark:bg-gray-800 dark:border-gray-700 bg-gray-800 border-gray-700 w-full" />
+                <input type="text" name="invoice" value={clientName} onChange={e => setClientName(e.target.value)} disabled={!isEdit} className="text-2xl font-semibold dark:bg-gray-800 dark:border-gray-700 bg-gray-800 border-gray-700 w-full" />
                 <input type="number" name="amount" value={amount} onChange={e => setAmount(Number(e.target.value))} disabled={!isEdit} className="text-3xl font-extrabold dark:bg-gray-800 dark:border-gray-700 bg-gray-800 border-gray-700 w-full" />
             </div>
             <ul role="list" className="space-y-5 my-7 text-gray-900 dark:text-white">
                 <li className="flex items-center">
-                    <span>📅</span>
+                    <span className="mr-2">📅</span>
                     <input type="date" name="creating-date" value={formattedDate} onChange={e => setCreationDate(new Date(e.target.value))} disabled={!isEdit} className="text-1xl font-semibold dark:bg-gray-800 dark:border-gray-700 bg-gray-800 border-gray-700 w-full" />
                 </li>
             </ul>
+            <span className="text-xs font-medium me-2 px-2.5 py-0.5 rounded" style={{ backgroundColor: statusColor, color: 'white' }}>
+                {invoice.status}
+            </span>
             {isEdit && (
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleEditInvoice}>
                     Edit

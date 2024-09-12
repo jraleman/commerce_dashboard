@@ -22,3 +22,7 @@ export const getMoneyStatusColor = (totalMoney: number, threshold: number) => {
 
 export const formatDate = (d?: Date) => d &&
     `${d.getFullYear()}-${(d.getMonth() + 1).toString().padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')}`;
+
+export const getRandomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+    
+export const randomNegative = () => Math.random() < 0.5 ? 1 : -1;

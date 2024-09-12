@@ -29,9 +29,9 @@ export default function SummaryWidget({
                             Ref: {reference}
                         </h4>
                         <div className="card-body">
-                            <p className="text-sm">{formatDate(date)}</p>
-                            <p className="text-sm">{description}</p>
-                            <p className="text-lg">{amount}</p>
+                            <p className="text-sm mt-2">{formatDate(date)}</p>
+                            <p className="text-xs mt-2">{description}</p>
+                            <p className="text-lg mt-2">{amount}</p>
                         </div>
                     </div>
                 ))}

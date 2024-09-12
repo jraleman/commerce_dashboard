@@ -46,19 +46,19 @@ export default function NewInvoiceForm(
     return (
         <div className="max-w-lg">
         {/* <Form onSubmit={handleNewInvoice} method="post"> */}
-            <label htmlFor='client-name' className="block mb-2 text-sm font-medium">
+            <label htmlFor='client-name' className="block mb-2 text-sm font-medium mt-5">
                 Client Name
             </label>
             <input type="text" name="invoice" value={clientName} onChange={e => setClientName(e.target.value)} className="bg-gray-100 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
-            <label htmlFor='creating-date' className="block mb-2 text-sm font-medium">
+            <label htmlFor='creating-date' className="block mb-2 text-sm font-medium mt-5">
                 Creation Date
             </label>
             <input type="date" name="creating-date" value={formattedDate} onChange={e => setCreationDate(new Date(e.target.value))} className="bg-gray-100 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
-            <label htmlFor='amount' className="block mb-2 text-sm font-medium">
+            <label htmlFor='amount' className="block mb-2 text-sm font-medium mt-5">
                 Amount
             </label>
             <input type="number" name="amount" value={amount} onChange={e => setAmount(Number(e.target.value))} className="bg-gray-100 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
-            <label htmlFor='reference' className="block mb-2 text-sm font-medium">
+            <label htmlFor='reference' className="block mb-2 text-sm font-medium mt-5">
                 Reference
             </label>
             <input type="text" name="reference" value={reference} onChange={e => setReference(e.target.value)} className="bg-gray-100 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />

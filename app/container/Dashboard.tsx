@@ -13,7 +13,7 @@ export default function Dashboard() {
     } = useInvoices({ summaryData });
 
     // TODO: Implement functionality to change threshold
-    const threshold = 5;
+    const threshold = 500;
 
     const handleEditInvoice = (editInvoiceData: Invoice) => {
         editExistingInvoice(editInvoiceData)
@@ -27,9 +27,10 @@ export default function Dashboard() {
         <div className="m-4 mx-auto max-w-screen-xl">
             <h1 className="mt-10 tracking-wide text-center mb-4 text-6xl font-extrabold leading-none tracking-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
-                    Dashboard
+                    Commerce Dashboard
                 </span>
             </h1>
+            <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" /> 
             <h2 className="text-2xl font-bold tracking-tightsm:text-6xl text-center mt-5">
                 SummaryWidget
             </h2>

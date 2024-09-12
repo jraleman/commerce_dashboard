@@ -1,5 +1,16 @@
 # A4A Intuit 2024
 
+Position: Frontend Engineer II
+- Tech interview with Ruben (Good Use of typescript)
+
+Other interviewers:
+- Nathaniel
+- Kathy
+- Sergey
+
+Commands used for craft project:
+
+```
 npx create-remix@latest
 npm install jest @testing-library/react @testing-library/jest-dom
 npm install -D tailwindcss postcss autoprefixer
@@ -8,74 +19,58 @@ npm i --save-dev @types/jest
 npm install -D jest-environment-jsdom
 npm install -D ts-jest
 npm install -D ts-node
+```
 
-...
+.......................................................
 
-Frontend Engineer II
+Interview Date (Notes):
 
-Ruben: Use of typescript
+Part 1
 
-======================
+- Write frontend focused code
+- 1 simple unit test
+- 15 mins to talk, ask questions, walk approach, show IDE, boilerplate code, understand any online resource, use of Codium (gh copilot competitor)
+- 90 mins to write the frontend, mention on things that I may forget
+- Stay on the same zoom room
 
-Write frontend focused code
-1 simple unit test
-
-- Setup IDE
-- Postman
-- NodeJS
-- CRA
-- Remix
-- Boilerplate code
-- GenAI
-- Remix
-
-15 mins to talk, ask questions, walk approach, show IDE, boilerplate code, understand any online resource, use of Codium (gh copilot competitor)
-90 mins to write the frontend, mention on things that I may forget
-Stay on the say zoom room
-
-— 
+---
 
 Part 2
 
-40 mins to walk through code
-Introduction + proud project (5 mins)
-Prepare presentation slides
-- 1 to 5 slides
-- Talk about proud project
+- Introduction + proud project (5 mins)
+    - 1 to 5 slides
+- 40 mins to walk through code
 
-Example: 
+For example:
 
-Hello everyone, I am Jose Ramon. I came from Panama years ago, I moved to the Bay Area to study and start a new life as software engineer. I had some jobs where I had to commute, etc… I moved to Chicago, then to Georgia. And now I like to introduce a proud project. If I were to this again next time, this is that I would consider . Now I share my screen to show my code… I was given a simple web app over 90 minutes that includes… I used this, some boilerplate code, etc…
+Hello everyone, I am Jose Ramon.
+I came from Panama years ago, I moved to the California Bay Area to study and start a new life as software engineer.
+I had some jobs where I had to commute, grow, etc…
+I moved to Chicago…, then to Georgia…
 
-I spend time doing small modular code, 10% mocking the backend, work on 
+And now I like to introduce a proud project. 
 
-—
+Challenge: Show a loading bar when the system is processing. 
+- We don’t know the estimated time (may take a few seconds to a few minutes), 
+- and we don’t know how many steps are there in total (could be between 4 to 64). 
+
+If I were to this again next time, this is that I would consider…
+
+Now, let me share my screen to show my code…
+I was given a simple web app over 90 minutes that includes…
+I used this, some boilerplate code, etc…
+I spend time doing small modular code, 10% mocking the backend, work on things…
+
+---
 
 Part 3
 
-New features
-Tech Debt, data structure, observability, a11y, i18n, possible obstacles, E2E testing
-Manager interview: Values questions, courage, customer (put sticky notes of examples to share)
+- New features
+- Tech Debt, data structure, observability, a11y, i18n, possible obstacles, E2E testing
 
-….
+---
 
-Nathaniel
-Kathy
+Part 4
 
-//////////////////////////////////////////////////////////////////////////////////////
-
-Project to be proud - Loading Progress bar
-
-Write medium post for 2024
-
-Challenge:
-- Show a loading bar when the system is processing. We don’t know the estimated time (may take a few seconds to a few minutes), and we don’t know how many steps are there in total (could be between 4 to 64). 
-
-================
-
-Slideshow (3)
-
-1. 1. (collage of me) Kid, school, college, music, with family, with Barry cat
-2. 2. Proud project - Loading (Progress) bar (unknown time and number of steps)
-3. 3. Show logarithmic func graph and how to solve the issue
-4. 4. Demo presentation
+- Manager interview: Values questions, courage, customer (put sticky notes of examples to share)
+Take a look at: https://www.themuse.com/advice/star-interview-method
